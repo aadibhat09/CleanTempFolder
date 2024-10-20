@@ -36,6 +36,5 @@ foreach ($folder in $tempFolders) {
 # Calculate the space cleared in MB
 $spaceClearedMB = [math]::Round(($initialSize - $clearedSize) / 1MB, 2)
 
-# Output the result
-$custom = New-BTAppId -AppId "abcdefg"
+# Send notification
 New-BurntToastNotification -Text "Temp files cleared", "$spaceClearedMB MB of temporary files have been cleared." -AppLogo "recycle.png"
